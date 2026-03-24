@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🎮 Game Library Explorer</h1>
+            <p>Discover your next favorite game!</p>
+            
+            <div class="controls">
+                <!-- Search Bar -->
+                <input type="text" id="searchInput" placeholder="Search games by name...">
+                
+                <!-- Genre Filter Dropdown -->
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                    <option value="action">Action</option>
+                    <option value="indie">Indie</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="role-playing-games-rpg">RPG</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="casual">Casual</option>
+                    <option value="simulation">Simulation</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="arcade">Arcade</option>
+                    <option value="platformer">Platformer</option>
+                    <option value="racing">Racing</option>
+                    <option value="sports">Sports</option>
+                    <option value="fighting">Fighting</option>
+                </select>
+
+                <!-- Sort Dropdown -->
+                <select id="sortSelect">
+                    <option value="rating-desc">Rating: High to Low</option>
+                    <option value="rating-asc">Rating: Low to High</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Loading Indicator -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Loading games...</p>
+        </div>
+
+        <!-- Game Cards Grid -->
+        <div id="gameGrid" class="game-grid">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Data provided by <a href="https://rawg.io/" target="_blank">RAWG.io</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
